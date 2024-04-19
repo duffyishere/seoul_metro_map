@@ -1,0 +1,539 @@
+{
+  "header": {
+    "resultCnt": 53,
+    "resultCode": "00",
+    "resultMsg": "정상 처리되었습니다."
+  },
+  "body": [
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 1,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2711",
+      "stinNm": "장암"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 2,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2712",
+      "stinNm": "도봉산"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 3,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2713",
+      "stinNm": "수락산"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 4,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2714",
+      "stinNm": "마들"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 5,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2715",
+      "stinNm": "노원"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 6,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2716",
+      "stinNm": "중계"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 7,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2717",
+      "stinNm": "하계"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 8,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2718",
+      "stinNm": "공릉(서울과학기술대)"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 9,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2719",
+      "stinNm": "태릉입구"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 10,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2720",
+      "stinNm": "먹골"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 11,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2721",
+      "stinNm": "중화"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 12,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2722",
+      "stinNm": "상봉(시외버스터미널)"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 13,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2723",
+      "stinNm": "면목"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 14,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2724",
+      "stinNm": "사가정"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 15,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2725",
+      "stinNm": "용마산"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 16,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2726",
+      "stinNm": "중곡"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 17,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2727",
+      "stinNm": "군자(능동)"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 18,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2728",
+      "stinNm": "어린이대공원(세종대)"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 19,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2729",
+      "stinNm": "건대입구"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 20,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2730",
+      "stinNm": "자양(뚝섬한강공원)"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 21,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2731",
+      "stinNm": "청담"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 22,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2732",
+      "stinNm": "강남구청"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 23,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2733",
+      "stinNm": "학동"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 24,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2734",
+      "stinNm": "논현"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 25,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2735",
+      "stinNm": "반포"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 26,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2736",
+      "stinNm": "고속터미널"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 27,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2737",
+      "stinNm": "내방"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 28,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2738",
+      "stinNm": "총신대입구(이수)"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 29,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2739",
+      "stinNm": "남성"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 30,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2740",
+      "stinNm": "숭실대입구(살피재)"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 31,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2741",
+      "stinNm": "상도"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 32,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2742",
+      "stinNm": "장승배기"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 33,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2743",
+      "stinNm": "신대방삼거리"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 34,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2744",
+      "stinNm": "보라매"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 35,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2745",
+      "stinNm": "신풍"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 36,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2746",
+      "stinNm": "대림(구로구청)"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 37,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2747",
+      "stinNm": "남구로"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 38,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2748",
+      "stinNm": "가산디지털단지"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 39,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2749",
+      "stinNm": "철산"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 40,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2750",
+      "stinNm": "광명사거리"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 41,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2751",
+      "stinNm": "천왕"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 42,
+      "railOprIsttCd": "S1",
+      "lnCd": "7",
+      "stinCd": "2752",
+      "stinNm": "온수(성공회대입구)"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 43,
+      "railOprIsttCd": "IC",
+      "lnCd": "7",
+      "stinCd": "751",
+      "stinNm": "까치울"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 44,
+      "railOprIsttCd": "IC",
+      "lnCd": "7",
+      "stinCd": "752",
+      "stinNm": "부천종합운동장"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 45,
+      "railOprIsttCd": "IC",
+      "lnCd": "7",
+      "stinCd": "753",
+      "stinNm": "춘의"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 46,
+      "railOprIsttCd": "IC",
+      "lnCd": "7",
+      "stinCd": "754",
+      "stinNm": "신중동"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 47,
+      "railOprIsttCd": "IC",
+      "lnCd": "7",
+      "stinCd": "755",
+      "stinNm": "부천시청"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 48,
+      "railOprIsttCd": "IC",
+      "lnCd": "7",
+      "stinCd": "756",
+      "stinNm": "상동"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 49,
+      "railOprIsttCd": "IC",
+      "lnCd": "7",
+      "stinCd": "757",
+      "stinNm": "삼산체육관"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 50,
+      "railOprIsttCd": "IC",
+      "lnCd": "7",
+      "stinCd": "758",
+      "stinNm": "굴포천"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 51,
+      "railOprIsttCd": "IC",
+      "lnCd": "7",
+      "stinCd": "759",
+      "stinNm": "부평구청"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 52,
+      "railOprIsttCd": "IC",
+      "lnCd": "7",
+      "stinCd": "760",
+      "stinNm": "산곡"
+    },
+    {
+      "mreaWideCd": "01",
+      "routCd": "7",
+      "routNm": "7호선",
+      "stinConsOrdr": 53,
+      "railOprIsttCd": "IC",
+      "lnCd": "7",
+      "stinCd": "761",
+      "stinNm": "석남(거북시장)"
+    }
+  ]
+}
