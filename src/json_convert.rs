@@ -1,7 +1,7 @@
 use std::fs::File;
-use std::io::Read;
+use std::io::{Error, Read};
 use serde::Deserialize;
-use crate::seoul_metro_map::Station;
+use crate::metro_graph::Data;
 
 #[derive(Debug, Deserialize)]
 #[serde(rename_all = "camelCase")]
@@ -24,24 +24,22 @@ struct Header {
 }
 
 #[derive(Debug, Deserialize)]
-struct Data {
+struct Body {
     header: Header,
     body: Vec<BodyItem>, // 여러 개의 정보를 저장하는 벡터
 }
 
-pub fn convert(path: &String) -> Result<Vec<Station>, Box<dyn std::error::Error>> {
+pub fn convert(path: &String) -> Result<Vec<Data>, Error> {
     let mut file = File::open(path)?;
     let mut json_str = String::new();
     file.read_to_string(&mut json_str)?;
 
-    let data: Data = serde_json::from_str(&json_str)?;
-    let mut stations: Vec<Station> = Vec::new();
+    let data: Body = serde_json::from_str(&json_str)?;
+    let mut stations: Vec<Data> = Vec::new();
     for body_item in &data.body {
-        let station = Station {
+        let station = Data {
             name: body_item.stin_nm.clone(),
-            code: body_item.stin_cd.clone(),
             line_name: body_item.rout_nm.clone(),
-            order: body_item.stin_cons_ordr,
         };
         stations.push(station)
     }
@@ -52,18 +50,12 @@ pub fn convert(path: &String) -> Result<Vec<Station>, Box<dyn std::error::Error>
 #[cfg(test)]
 mod tests {
     use crate::json_convert::convert;
-    use crate::seoul_metro_map::Station;
+    use crate::metro_graph::Data;
 
     #[test]
     fn test_json_parsing() -> Result<(), Box<dyn std::error::Error>> {
         let res = convert(&String::from("./untitled/resources/1.json"));
-        let expected = Station {
-            name: String::from("연천"),
-            code: String::from("100-3"),
-            line_name: String::from("1호선"),
-            order: 1,
-        };
-
+        let expected = Data::new(String::from("연천"), String::from("1호선"));
         assert_eq!(res.unwrap()[0], expected);
 
         Ok(())

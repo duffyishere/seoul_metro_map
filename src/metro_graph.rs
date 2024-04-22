@@ -1,97 +1,78 @@
-use std::cmp::Ordering;
 use std::collections::{BinaryHeap, HashMap};
 use std::error::Error;
 use serde::{Deserialize, Serialize};
 use crate::json_convert::convert;
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
-pub struct Station {
+#[derive(Debug, Clone, Ord, PartialOrd, Serialize, Deserialize)]
+pub struct Data {
     pub name: String,
-    pub code: String,
     pub line_name: String,
-    pub order: i8,
 }
 
-impl Station {
-    pub fn with_name(name: String) -> Self {
-        Station {
+impl Data {
+    pub fn new(name: String, line_name: String) -> Self {
+        Data {
             name,
-            code: String::from(""),
-            line_name: String::from(""),
-            order: 0,
+            line_name,
         }
     }
 }
 
-impl PartialEq for Station {
+impl PartialEq for Data {
     fn eq(&self, other: &Self) -> bool {
         self.name == other.name
     }
 }
 
-impl Eq for Station {}
+impl Eq for Data {}
 
-impl std::hash::Hash for Station {
+impl std::hash::Hash for Data {
     fn hash<H: std::hash::Hasher>(&self, state: &mut H) {
         self.name.hash(state);
     }
 }
 
-impl Ord for Station {
-    fn cmp(&self, other: &Self) -> Ordering {
-        self.order.cmp(&other.order)
-    }
-}
-
-impl PartialOrd for Station {
-    fn partial_cmp(&self, other: &Self) -> Option<Ordering> {
-        Some(self.cmp(other))
-    }
-}
-
 #[derive(Debug)]
-pub struct Graph {
-    adjacency_list: HashMap<Station, Vec<Station>>,
-    edge_weights: HashMap<Station, HashMap<Station, i16>>,
+pub struct MetroGraph {
+    adjacency_list: HashMap<Data, Vec<Data>>,
+    edge_weights: HashMap<Data, HashMap<Data, i16>>,
 }
 
-impl Graph {
+impl MetroGraph {
     pub fn new() -> Self {
-        Graph {
+        let mut graph = MetroGraph {
             adjacency_list: HashMap::new(),
             edge_weights: HashMap::new(),
+        };
+
+        for i in 0..10 {
+            let stations = convert(&format!("./resources/{}.json", i)).expect("파일 경로 및 내용을 확인해주세요.");
+            for i in 0..stations.len() - 1 {
+                graph.add_edge(&stations[i], &stations[i + 1].clone(), 1);
+            }
         }
+
+        graph
     }
 
-    pub fn add_metro_line(&mut self, file_path: &String) -> Result<(), Box<dyn Error>> {
-        let stations = convert(&file_path)?;
-        for i in 0..stations.len() - 1 {
-            self.add_edge(stations[i].clone(), stations[i + 1].clone(), 1);
-        }
-        Ok(())
-    }
-
-    fn add_edge(&mut self, departure: Station, destination: Station, distance: i16) {
+    fn add_edge(&mut self, departure: &Data, destination: &Data, distance: i16) {
         self.adjacency_list.entry(departure.clone()).or_insert_with(Vec::new).push(destination.clone());
         self.edge_weights.entry(departure.clone()).or_insert_with(HashMap::new).insert(destination.clone(), distance);
 
         self.adjacency_list.entry(destination.clone()).or_insert_with(Vec::new).push(departure.clone());
-        self.edge_weights.entry(destination).or_insert_with(HashMap::new).insert(departure, distance);
+        self.edge_weights.entry(destination.clone()).or_insert_with(HashMap::new).insert(departure.clone(), distance);
     }
 
-    pub fn shortest_path(&self, departure_name: String, destination_name: String) -> i16 {
-        let mut distance: HashMap<Station, i16> = HashMap::new();
-        let mut queue: BinaryHeap<Station> = BinaryHeap::new();
-        let mut parent: HashMap<Station, Option<Station>> = HashMap::new();
-
-        let departure = Station::with_name(departure_name.clone());
-        let destination = Station::with_name(destination_name.clone());
+    pub fn find_path(&self, departure: &Data, destination: &Data) -> i16 {
+        let mut distance: HashMap<Data, i16> = HashMap::new();
+        let mut queue: BinaryHeap<Data> = BinaryHeap::new();
+        let mut parent: HashMap<Data, Option<Data>> = HashMap::new();
 
         distance.insert(departure.clone(), 0);
         queue.push(departure.clone());
 
         while let Some(current) = queue.pop() {
-            if current == destination {
+            if current.eq(&destination) {
                 break;
             }
             let current_distance = distance[&current];
@@ -108,12 +89,12 @@ impl Graph {
             }
         }
 
-        self.print_shortest_path(&departure, &destination, distance.clone(), parent);
+        self.print_path(&departure, &destination, distance.clone(), parent);
 
         distance.get(&destination).cloned().unwrap_or(-1)
     }
 
-    pub fn print_shortest_path(&self, departure: &Station, destination: &Station, distance: HashMap<Station, i16>, parent: HashMap<Station, Option<Station>>) {
+    fn print_path(&self, departure: &Data, destination: &Data, distance: HashMap<Data, i16>, parent: HashMap<Data, Option<Data>>) {
         let mut path = vec![destination.clone()];
         let mut current = destination.clone();
         while let Some(prev) = parent.get(&current).unwrap() {
@@ -139,19 +120,8 @@ mod tests {
 
     #[test]
     fn eq_test() {
-        let s1 = Station {
-            name: String::from("1"),
-            code: String::from("2"),
-            line_name: String::from("1"),
-            order: 0,
-        };
-
-        let s2 = Station {
-            name: String::from("1"),
-            code: String::from("1"),
-            line_name: String::from("1"),
-            order: 0,
-        };
+        let s1 = Data::new(String::from("시청역"), String::from("1호선"));
+        let s2 = Data::new(String::from("시청역"), String::from("2호선"));
 
         assert_eq!(s1, s2);
     }
